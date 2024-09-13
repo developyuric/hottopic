@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media query</title>
+    <style>
+        *{margin: 0;padding:0;}
+        #box1{
+            width:25%;
+            height: 200px;
+            box-sizing: border-box;
+            float: left;
+            overflow: hidden;
+        }
+        #box1{
+            background-image: url("img/HotTopic.jpg");
+            background-size: cover;
+            background-position: center;
+            position: relative;           
+        }        
+        #box1_1{
+            position:absolute;
+            top:150px;
+            width:100%;
+            height:50px;
+            background-color: rgb(31, 30, 30);
+            opacity:0.8;
+            text-align: center;
+            color:white;
+            line-height: 50px;
+            transition: 0.5s;
+            z-index: 100;      
+        }
+        #box1_2{
+            opacity: 0;
+            position:absolute;
+            bottom:0;
+            width:100%;
+            height:50px;
+            background-color: rgb(31, 30, 30);           
+            text-align: center;
+            color:white;
+            line-height: 50px;
+            transition: 0.5s;
+            z-index: 200;
+        }
+        #box1:hover #box1_1{
+            opacity:0;
+            height:200px;  
+            top:0;
+            font-weight: 100;
+        }
+
+        #box1:hover #box1_2{
+            opacity: 0.8 !important;
+            height:200px;
+            font-weight: 100 !important;
+        }
+       
+    </style>
+</head>
+<body>
+    <div id="box1">        
+        <div id="box1_1">
+            Global IT
+        </div>
+        <div id="box1_2">
+            Course Introduction
+            <p>
+                <p>Java</p>
+                <p>Networking</p>
+                <p>Artificial Intelligence</p>
+            </p>
+        </div>        
+    </div>    
+</body>
+</html>
